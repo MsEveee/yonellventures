@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import momwash from "../../assets/images/momwash.jpeg";
-
+import paxsoap from "../../assets/images/paxsoap.avif";
+import plastic from "../../assets/images/plastic.avif";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -10,9 +11,9 @@ const Hero = () => {
     "WELCOME TO YONELL VENTURES!!!!",
   ];
 
-  
-  // const images = [paxsoap, plastic, momwash]; // Array of background images
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const textRefs = useRef([]);
+  const images = [paxsoap, plastic, momwash]; 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Handle text animation
   useEffect(() => {
@@ -31,25 +32,23 @@ const Hero = () => {
     }
   }, []);
 
-  const textRefs = useRef([]);
-
   // Background image slideshow
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 5000); // Change image every 5 seconds
-  //   return () => clearInterval(interval); // Cleanup on component unmount
-  // }, [images.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [images.length]);
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center"
+      className="relative h-96 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${momwash})`,
+        backgroundImage: `url(${images[currentImageIndex]})`,
         
       }}
     >
-    
+  
       <div
         className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"
         aria-hidden="true"
@@ -68,6 +67,7 @@ const Hero = () => {
           ))}
         </div>
 
+        {/* Call-to-Action Button */}
         <button
           className="mt-6 px-6 py-3 bg-yellow-500 text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg focus:outline-none focus:ring-4"
           onClick={() => navigate("/about")}
