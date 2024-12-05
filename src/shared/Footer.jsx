@@ -19,7 +19,7 @@ const Footer = ({ bgcolor }) => {
             Email:{" "}
             <a
               href="mailto:bidigreenghanalimited@gmail.com"
-              className="text-green-400 hover:underline"
+              className="text-yellow-400 hover:underline"
             >
              info@yonellventures.com
             </a>
@@ -29,7 +29,7 @@ const Footer = ({ bgcolor }) => {
             <br />
             <a
               href="tel:+233553396566"
-              className="text-green-400 hover:underline"
+              className="text-yellow-400 hover:underline"
             >
               +233 553-396786
             </a>
@@ -43,7 +43,7 @@ const Footer = ({ bgcolor }) => {
             <li>
               <Link
                 to="/privacy-policy"
-                className="text-green-400 hover:underline"
+                className="text-yellow-400 hover:underline"
               >
                 Privacy Policy
               </Link>
@@ -51,18 +51,18 @@ const Footer = ({ bgcolor }) => {
             <li>
               <Link
                 to="/terms-conditions"
-                className="text-green-400 hover:underline"
+                className="text-yellow-400 hover:underline"
               >
                 Terms and Conditions
               </Link>
             </li>
             <li>
-              <Link to="/help" className="text-green-400 hover:underline">
+              <Link to="/help" className="text-yellow-400 hover:underline">
                 Help
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="text-green-400 hover:underline">
+              <Link to="/faq" className="text-yellow-400 hover:underline">
                 FAQ
               </Link>
             </li>

@@ -2,20 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import momwash from "../../assets/images/momwash.jpeg";
-import paxsoap from "../../assets/images/paxsoap.avif"; // Add more images as needed
-import plastic from "../../assets/images/plastic.avif";
+
 
 const Hero = () => {
   const navigate = useNavigate();
   const texts = [
     "WELCOME TO YONELL VENTURES!!!!",
-  
-    
   ];
 
-  const textRefs = useRef([]);
-  const images = [paxsoap, plastic, momwash]; // Array of background images
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // const images = [paxsoap, plastic, momwash]; // Array of background images
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Handle text animation
   useEffect(() => {
@@ -34,29 +31,30 @@ const Hero = () => {
     }
   }, []);
 
+  const textRefs = useRef([]);
+
   // Background image slideshow
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [images.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 5000); // Change image every 5 seconds
+  //   return () => clearInterval(interval); // Cleanup on component unmount
+  // }, [images.length]);
 
   return (
     <div
-      className="relative w-full bg-cover bg-center h-screen"
+      className="relative min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: `url(${images[currentImageIndex]})`,
-        transition: "background-image 1s ease-in-out",
+        backgroundImage: `url(${momwash})`,
+        
       }}
     >
-      {/* Gradient Overlay */}
+    
       <div
         className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"
         aria-hidden="true"
       ></div>
 
-      {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <div className="text-white">
           {texts.map((text, index) => (
@@ -67,11 +65,9 @@ const Hero = () => {
             >
               {text}
             </div>
-           
           ))}
-          <p className="text-4lg font-extrabold "></p>
         </div>
-        {/* Call-to-Action Button */}
+
         <button
           className="mt-6 px-6 py-3 bg-yellow-500 text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg focus:outline-none focus:ring-4"
           onClick={() => navigate("/about")}
