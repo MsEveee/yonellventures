@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
-import shower from "../../assets/images/shower.jpg";
-import dtergent from "../../assets/images/dtergent.jpg"; // Add more images as needed
-import washingL from "../../assets/images/washingL.jpg";
+import momwash from "../../assets/images/momwash.jpeg";
+import paxsoap from "../../assets/images/paxsoap.avif"; // Add more images as needed
+import plastic from "../../assets/images/plastic.avif";
 
 const Hero = () => {
   const navigate = useNavigate();
   const texts = [
     "WELCOME TO YONELL VENTURES!!!!",
+  
     
   ];
 
   const textRefs = useRef([]);
-  const images = [dtergent, washingL, shower]; // Array of background images
+  const images = [paxsoap, plastic, momwash]; // Array of background images
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Handle text animation
@@ -51,7 +52,7 @@ const Hero = () => {
     >
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-75"
+        className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"
         aria-hidden="true"
       ></div>
 
@@ -68,14 +69,14 @@ const Hero = () => {
             </div>
            
           ))}
-          <p className="text-4lg font-extrabold ">We Provide the best Detergent,Disinfectant and Shower Gell</p>
+          <p className="text-4lg font-extrabold "></p>
         </div>
         {/* Call-to-Action Button */}
         <button
           className="mt-6 px-6 py-3 bg-yellow-500 text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg focus:outline-none focus:ring-4"
-          onClick={() => navigate("/products")}
+          onClick={() => navigate("/about")}
         >
-          Browse Products
+          Learn More
         </button>
       </div>
     </div>

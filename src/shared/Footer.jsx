@@ -1,108 +1,113 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import insta from "../assets/images/insta.jpg";
+import link from "../assets/images/link.png";
+import tiktok from "../assets/images/tiktok.webp";
 
-
-const Footer = ({  bgcolor }) => {
+const Footer = ({ bgcolor }) => {
   const currentYear = new Date().getFullYear();
 
-  const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/products", label: "Products" },
-    { path: "/contact", label: "Contact Us" },
-  ];
-
   return (
+    <footer
+      className={`w-full px-6 py-8 bg-gray-800 text-white`}
+      style={{ backgroundColor: bgcolor }}
+    >
+      <div className="flex flex-col gap-10 md:flex-row md:justify-evenly">
+        <div>
+          <h4 className="mb-4 text-xl font-semibold text-white">Contact Us</h4>
+          <p className="mb-2">
+            Email:{" "}
+            <a
+              href="mailto:bidigreenghanalimited@gmail.com"
+              className="text-green-400 hover:underline"
+            >
+             info@yonellventures.com
+            </a>
+          </p>
+          <p>
+            Phone:
+            <br />
+            <a
+              href="tel:+233553396566"
+              className="text-green-400 hover:underline"
+            >
+              +233 553-396786
+            </a>
 
-<footer
-className={`w-full px-6 py-8 bg-gray-800 text-white backdrop-blur-md`}
-style={{ backgroundColor: bgcolor }}
->
+          </p>
+        </div>
 
-<div className="flex flex-col items-center justify-between gap-6 mb-8 md:flex-row">
-  
-  <div className="text-center md:text-left">
-    <h4 className="mb-2 text-xl font-semibold">Contact Us</h4>
-    <p>
-      Email:
-      <a
-        href="mailto:info@cropcircle.com"
-        className="text-yellow-400 hover:underline"
-      >
-          info@yonellventure.com
-      </a>
-    </p>
-    <p>
-      Phone:
-      <a
-        href="tel:+1234567890"
-        className="text-yellow-400 hover:underline"
-      >
-          +233 553-396566
-      </a>
-    </p>
-  </div>
+        <div>
+          <h4 className="mb-4 text-xl font-semibold text-white">Quick Links</h4>
+          <ul className="space-y-2">
+            <li>
+              <Link
+                to="/privacy-policy"
+                className="text-green-400 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/terms-conditions"
+                className="text-green-400 hover:underline"
+              >
+                Terms and Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to="/help" className="text-green-400 hover:underline">
+                Help
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="text-green-400 hover:underline">
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </div>
 
+        <div>
+          <h4 className="mb-4 text-xl font-semibold text-white">Follow Us</h4>
+          <div className="flex items-center gap-4">
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={insta}
+                alt="Instagram"
+                className="w-10 h-10 rounded-lg"
+              />
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={link} alt="LinkedIn" className="w-10 h-10 rounded-lg" />
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={tiktok} alt="TikTok" className="w-10 h-10 rounded-lg" />
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <div className="text-center md:text-left">
-    <h4 className="mb-2 text-xl font-semibold">Quick Links</h4>
-    <ul className="flex flex-col gap-4 md:flex-row">
-      <li>
-        <Link
-          
-          className="text-yellow-400 hover:underline"
-        >
-          Privacy Policy
-        </Link>
-      </li>
-      <li>
-        <Link
-          
-          className="text-yellow-400 hover:underline"
-        >
-          Terms and Conditions
-        </Link>
-      </li>
-      <li>
-        <Link  className="text-yellow-400 hover:underline">
-          Help
-        </Link>
-      </li>
-      
-      <li>
-        <Link  className="text-yellow-400 hover:underline">
-          FAQ
-        </Link>
-      </li>
-    </ul>
-  </div>
-
-  {/* Dynamic Links */}
-  <div className="text-center md:text-left">
-    <h4 className="mb-2 text-xl font-semibold">Explore</h4>
-    <ul className="flex flex-col gap-4 md:flex-row">
-      {navLinks.map((link, index) => (
-        <li key={index}>
-          <Link
-            to={link.path}
-            className="text-yellow-400 hover:underline"
-          >
-            {link.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-
-{/* Bottom Section */}
-<div className="pt-4 text-center border-t border-gray-700">
-  <p className="text-sm">
-    &copy; {currentYear} Yonell-Vnetures. All rights reserved.
-  </p>
-</div>
-</footer>
+      <div className="mt-8 pt-4 text-center border-t border-gray-700">
+        <p className="text-sm">
+          &copy; {currentYear} Yonell-Ventures. All rights reserved.
+        </p>
+      </div>
+    </footer>
   );
 };
+
 export default Footer;

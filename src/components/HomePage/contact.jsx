@@ -1,6 +1,7 @@
 import { Mail, MapPinHouse, PhoneCall } from "lucide-react";
 import Navbar from "../../shared/Navbar";
 import Footer from "../../shared/Footer";
+import smilingimage from "../../assets/images/smilingimage.jpg"
 
 
 
@@ -11,10 +12,11 @@ const ContactUs = () => {
       <div className="flex flex-col md:flex-row py-16 items-center md:items-start gap-8 px-4 md:px-16">
        
         <div className="w-full md:w-1/2 rounded-md py-14 ">
-          <h1 className="text-3xl font-semibold py-5  underline">Partner with Us Today</h1>
+        <img src={smilingimage} alt="" />
+          {/* <h1 className="text-3xl font-semibold py-5  underline">Partner with Us Today</h1>
           <p className="mb-6 text-sm leading-relaxed  text-gray-700 md:text-lg">
-           <img src="" alt="" />
-          </p>
+           <img src={} alt="" />
+          </p> */}
         </div>
 
         <div className="w-full md:w-1/2">

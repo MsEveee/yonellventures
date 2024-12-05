@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import dtergent from "../../assets/images/dtergent.jpg";
+import mansmile from "../../assets/images/mansmile.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +10,7 @@ const ImageSection = () => {
   return (
     <div className="w-full max-w-sm p-4">
       <img
-        src={dtergent}
+        src={mansmile}
         alt="Produce"
         className="object-cover w-full h-auto rounded-lg shadow-lg"
       />
@@ -25,18 +25,22 @@ const TextSection = () => {
         What We Do
       </h1>
       <p className="mb-6 text-sm leading-relaxed text-gray-700 md:text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+        Yonell Ventures produces eco-friendly personal care and household
+        products, utilizing natural ingredients such as cocoa pod, turmeric,
+        sandalwood, aloe vera, carrot, and lemongrass for laundry, skin, and
+        hair care. The brand is committed to providing high-quality, sustainable
+        products that improve daily routines. The product range includes organic
+        shampoos, liquid soaps, laundry detergents, and bleach, designed to
+        promote healthy living while supporting environmental sustainability.
       </p>
-      {/* <NavLink
+      <NavLink
         to="/about"
         className="px-6 py-2 text-sm font-bold text-white transition duration-300 bg-yellow-600 rounded-lg shadow-md hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50 md:text-base"
+        onClick={() => navigate("/about")}
+
       >
         Learn More
-      </NavLink> */}
+      </NavLink>
     </div>
   );
 };

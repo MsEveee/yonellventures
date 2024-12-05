@@ -4,6 +4,7 @@ import Hero from '../../components/HomePage/Hero'
 import About from '../../components/HomePage/About'
 import Footer from '../../shared/Footer'
 import Service from '../../components/HomePage/Service'
+import Review from '../../components/HomePage/Review'
 
 const HomePage = () => {
   return (
@@ -11,7 +12,8 @@ const HomePage = () => {
         <Navbar/>
         <Hero/>
         <About/>
-        <Service/>
+        <Review/>
+        {/* <Service/> */}
         <Footer/>
     </div>
   )
