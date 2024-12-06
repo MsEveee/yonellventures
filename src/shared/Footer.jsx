@@ -37,6 +37,21 @@ const Footer = ({ bgcolor }) => {
             </a>
 
           </p>
+          <p>
+            Location:
+            <br />
+            <a
+              href="GPS: WR-161-8433"
+              className="text-yellow-400 hover:underline"
+            >
+              GPS: WR-161-8433 <br />
+              Cucumber street <br />
+              Asem Asa No 2 off the Takoradi <br />
+              Cape Coast highway close to shama junction
+              
+            </a>
+
+          </p>
         </div>
 
         <div>
