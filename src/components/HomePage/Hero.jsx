@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
-import momwash from "../../assets/images/momwash.jpeg";
-import paxsoap from "../../assets/images/paxsoap.avif";
-import plastic from "../../assets/images/plastic.avif";
+import momwash1 from "../../assets/images/momwash1.jpg";
+import paxsoap from "../../assets/images/paxsoap.jpg";
+import plastic from "../../assets/images/plastic.jpg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   const textRefs = useRef([]);
-  const images = [paxsoap, plastic, momwash]; 
+  const images = [paxsoap, plastic, momwash1]; 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Handle text animation

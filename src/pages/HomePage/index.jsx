@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from '../../shared/Navbar'
 import Hero from '../../components/HomePage/Hero'
 import About from '../../components/HomePage/About'
-import Footer from '../../shared/Footer'
-import Service from '../../components/HomePage/Service'
+import Footer from '../../shared/Footer' 
 import Review from '../../components/HomePage/Review'
+import Products from '../../components/HomePage/Products'
 
 const HomePage = () => {
   return (
@@ -12,8 +12,8 @@ const HomePage = () => {
         <Navbar/>
         <Hero/>
         <About/>
+        <Products/>
         <Review/>
-        {/* <Service/> */}
         <Footer/>
     </div>
   )

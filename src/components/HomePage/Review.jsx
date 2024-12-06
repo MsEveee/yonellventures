@@ -2,6 +2,7 @@ import { Archive, Banknote, ThumbsUp, User } from "lucide-react";
 import React from "react";
 
 const Review = () => {
+
   return (
     <div className="py-10">
       <h1 className="text-center text-3xl font-semibold text-yellow-700 underline">
@@ -20,22 +21,22 @@ const Review = () => {
         cleaning products.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition-transform">
+  <div className="bg-white border rounded-lg p-6 flex flex-col items-center">
     <ThumbsUp className="text-yellow-500  text-4xl mb-4" />
     <p className="text-gray-700 text-center font-medium">We Provide You With Quality Products</p>
   </div>
 
-  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition-transform">
+  <div className="bg-white border rounded-lg p-6 flex flex-col items-center">
     <User className="text-yellow-500 text-4xl mb-4" />
     <p className="text-gray-700 text-center font-medium">We go above and beyond to ensure customer satisfaction.</p>
   </div>
 
-  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition-transform">
+  <div className="bg-white border rounded-lg p-6 flex flex-col items-center">
     <Archive className="text-yellow-500 text-4xl mb-4" />
     <p className="text-gray-700 text-center font-medium">We fulfill every order, no matter the quantity.</p>
   </div>
 
-  <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition-transform">
+  <div className="bg-white border rounded-lg p-6 flex flex-col items-center">
     <Banknote className="text-yellow-500 text-4xl mb-4" />
     <p className="text-gray-700 text-center font-medium">We deliver exceptional quality for every penny spent.</p>
   </div>

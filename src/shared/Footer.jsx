@@ -18,20 +18,22 @@ const Footer = ({ bgcolor }) => {
           <p className="mb-2">
             Email:{" "}
             <a
-              href="mailto:bidigreenghanalimited@gmail.com"
+              href="mailto:"
               className="text-yellow-400 hover:underline"
             >
-             info@yonellventures.com
+             yonelventures@gmail.com 
             </a>
           </p>
           <p>
             Phone:
             <br />
             <a
-              href="tel:+233553396566"
+              href="tel:242-612778"
               className="text-yellow-400 hover:underline"
             >
-              +233 553-396786
+              +233 242-612778 <br />
+              +233 207-494520
+
             </a>
 
           </p>

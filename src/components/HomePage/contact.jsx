@@ -1,53 +1,93 @@
-import { Mail, MapPinHouse, PhoneCall } from "lucide-react";
 import Navbar from "../../shared/Navbar";
 import Footer from "../../shared/Footer";
-import smilingimage from "../../assets/images/smilingimage.jpg"
-
-
+import smilingimage from "../../assets/images/smilingimage.jpg";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 
 const ContactUs = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_jaj2gr2",
+        "template_vo348b7",
+        formRef.current,
+        "So4G5NE49PJeSK3-B"
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent:", result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+
+    e.target.reset(); // Reset the form after submission
+  };
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="flex flex-col md:flex-row py-16 items-center md:items-start gap-8 px-4 md:px-16">
-       
         <div className="w-full md:w-1/2 rounded-md py-14 ">
-        <img src={smilingimage} alt="" />
-          {/* <h1 className="text-3xl font-semibold py-5  underline">Partner with Us Today</h1>
-          <p className="mb-6 text-sm leading-relaxed  text-gray-700 md:text-lg">
-           <img src={} alt="" />
-          </p> */}
+          <img src={smilingimage} alt="" />
         </div>
 
         <div className="w-full md:w-1/2">
           <div className="px-4 md:px-14 py-4">
             <h1 className="font-bold text-2xl md:text-3xl py-2">
-              Get in touch
+              Place Your Order
             </h1>
-            <p>Send us a message.</p>
+            <p>Send us a message</p>
           </div>
 
           <div className="px-4 md:px-14">
-            <form action="" className="flex flex-col gap-4">
+            <form
+              action=""
+              className="flex flex-col gap-4 "
+              ref={formRef}
+              onSubmit={sendEmail}
+            >
               <input
                 type="text"
+                name="user_name"
                 placeholder="Your Full Name"
                 className="h-12 rounded px-5 outline-none border w-full"
               />
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 placeholder="Email"
                 className="h-12 rounded px-5 outline-none border w-full"
               />
               <input
                 type="text"
+                name="user_phone"
                 placeholder="Phone number"
                 className="h-12 rounded px-5 outline-none border w-full"
               />
+              <input
+                type="text"
+                name="product"
+                placeholder="Product"
+                className="h-12 rounded px-5 outline-none border w-full"
+              />
+              <input
+                type="number"
+                name="quantity"
+                id=""
+                placeholder="Quantity"
+                className="h-12 rounded px-5 outline-none border w-full"
+              />
               <textarea
-                name="message"
-                placeholder="Message..."
+                name="delivery_details"
+                placeholder="Delivery Details"
                 className="h-28 rounded px-5 py-3 outline-none border w-full"
               ></textarea>
               <button
@@ -102,7 +142,7 @@ const ContactUs = () => {
         </div>
       </div> */}
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
