@@ -25,6 +25,7 @@ const Products = () => {
               <h2 className="text-lg py-5 font-semibold text-gray-800">
                 {product.name}
               </h2>
+              <span className="text-lg py-5 font-semibold text-gray-400">{product.description}</span>
               <p className="text-green-600 font-medium mt-2">
                 GHS {product.price}
               </p>

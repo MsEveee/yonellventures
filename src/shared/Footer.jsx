@@ -31,7 +31,7 @@ const Footer = ({ bgcolor }) => {
               href="tel:242-612778"
               className="text-yellow-400 hover:underline"
             >
-              +233 242-612778 <br />
+              +233 243-612778 <br />
               +233 207-494520
 
             </a>
@@ -44,7 +44,7 @@ const Footer = ({ bgcolor }) => {
               href="GPS: WR-161-8433"
               className="text-yellow-400 hover:underline"
             >
-              GPS: WR-161-8433 <br />
+              GPS: WR-161-8434 <br />
               Cucumber street <br />
               Asem Asa No 2 off the Takoradi <br />
               Cape Coast highway close to shama junction
