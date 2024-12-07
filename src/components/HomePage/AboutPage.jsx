@@ -82,10 +82,19 @@ const AboutPage = () => {
         <h2 className="text-3xl font-semibold text-yellow-700 underline">WHAT WE PRODUCE</h2>
         <p className="py-2">We produce an extensive variety of products at our manufacturing facility.</p>
 
-        <li>Liquid Detergents including handwash soap, dishwashing liquids, hair shampoo, shower gel, and more.</li>
-        <li>Disinfectants, including  antiseptic solutions and general-purpose disinfectants.</li>
-        
+        <li>liquid soap</li>
+        <li>Shower Gel</li>
+        <li>Bleach (Power-Zone)</li>
+        <li>Disinfectant</li>
+        <li>Antiseptic</li>
+        <li>Cake Toilet Soap</li>
+        <li>Hand Sanitizer</li>
+        <li>Shampoo</li>
+        <li>Hair Conditioner</li>
+
       </div>
+
+     
 
       <div className="px-8 pb-5">
         <h2 className="text-lg  font-semibold">Key Features of Our Products</h2>
@@ -95,6 +104,8 @@ const AboutPage = () => {
         <li>Gentle on skin, ideal for sensitive skin and irritation.</li>
         <li>High-quality materials ensure safety and performance</li>
       </div>
+
+     
       <Footer />
     </div>
   );

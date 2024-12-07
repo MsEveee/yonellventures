@@ -17,11 +17,8 @@ const Footer = ({ bgcolor }) => {
           <h4 className="mb-4 text-xl font-semibold text-white">Contact Us</h4>
           <p className="mb-2">
             Email:{" "}
-            <a
-              href="mailto:"
-              className="text-yellow-400 hover:underline"
-            >
-             yonelventures@gmail.com 
+            <a href="mailto:" className="text-yellow-400 hover:underline">
+              yonelventures@gmail.com
             </a>
           </p>
           <p>
@@ -33,9 +30,7 @@ const Footer = ({ bgcolor }) => {
             >
               +233 243-612778 <br />
               +233 207-494520
-
             </a>
-
           </p>
           <p>
             Location:
@@ -45,12 +40,12 @@ const Footer = ({ bgcolor }) => {
               className="text-yellow-400 hover:underline"
             >
               GPS: WR-161-8434 <br />
+              P.O. Box 190, Sekondi <br />
               Cucumber street <br />
               Asem Asa No 2 off the Takoradi <br />
               Cape Coast highway close to shama junction
-              
+             
             </a>
-
           </p>
         </div>
 
@@ -89,29 +84,17 @@ const Footer = ({ bgcolor }) => {
         <div>
           <h4 className="mb-4 text-xl font-semibold text-white">Follow Us</h4>
           <div className="flex items-center gap-4">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="" target="_blank" rel="noopener noreferrer">
               <img
                 src={insta}
                 alt="Instagram"
                 className="w-10 h-10 rounded-lg"
               />
             </a>
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="" target="_blank" rel="noopener noreferrer">
               <img src={link} alt="LinkedIn" className="w-10 h-10 rounded-lg" />
             </a>
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="" target="_blank" rel="noopener noreferrer">
               <img src={tiktok} alt="TikTok" className="w-10 h-10 rounded-lg" />
             </a>
           </div>
