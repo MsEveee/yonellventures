@@ -73,21 +73,13 @@ const products = [
     {
         image: sgel,
         name: "Yonell Shower Gel",
-        description: "Made from tumeric,sandalwood & alata semina,soothes the skin & prevent acne",
+        description: "Made from tumeric,sandalwood & alata-semina,soothes the skin & prevent acne",
         price: 45,
         
     },
    
    
-    
-
-   
-
-   
-
-
- 
-    
+     
 
 ]
 
