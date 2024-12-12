@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import menu from "../assets/SVG/menu.svg";
+import logo from "../assets/images/logo.jpg";
 
 
 const Navbar = () => {
@@ -47,7 +48,7 @@ const Navbar = () => {
       
         <div className="text-xl font-bold text-yellow-500">
           <NavLink to="/" className="py-2">
-            YONELL-VENTURES
+            <img src={logo} alt="" width="14%" />
           </NavLink>
         </div>
 
