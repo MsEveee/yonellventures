@@ -44,7 +44,6 @@ const Footer = ({ bgcolor }) => {
               Cucumber street <br />
               Asem Asa No 2 off the Takoradi <br />
               Cape Coast highway close to shama junction
-             
             </a>
           </p>
         </div>
@@ -84,17 +83,29 @@ const Footer = ({ bgcolor }) => {
         <div>
           <h4 className="mb-4 text-xl font-semibold text-white">Follow Us</h4>
           <div className="flex items-center gap-4">
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/yonell_ventures1?igsh=ZG9haXY2aDd4NnF6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={insta}
                 alt="Instagram"
                 className="w-10 h-10 rounded-lg"
               />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/share/19VvMgrRCj/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={link} alt="LinkedIn" className="w-10 h-10 rounded-lg" />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://vm.tiktok.com/ZMkLvRJGM/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={tiktok} alt="TikTok" className="w-10 h-10 rounded-lg" />
             </a>
           </div>
